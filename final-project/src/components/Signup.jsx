@@ -1,11 +1,10 @@
 import {Link} from 'react-router-dom'
-import Login from './Login.jsx'
 
 
 const Signup = () => {
     return ( 
         <div className="container">
-            <form class="w-50 mx-auto">
+            <form class="w-50 mx-auto rounded">
             <h1 class="lead fs-1 text-center mb-4 fw-bold text-primary">Sign up</h1>
             <hr />
             <div class="form-group mb-4 mt-5">

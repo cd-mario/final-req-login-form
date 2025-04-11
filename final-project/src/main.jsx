@@ -9,10 +9,10 @@ createRoot(document.getElementById('root')).render(
     <Router>
       <Switch>
         <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/signup">
           <Signup />
+        </Route>
+        <Route path="/home">
+          <Home />
         </Route>
         <Route path="/login">
           <Login />
