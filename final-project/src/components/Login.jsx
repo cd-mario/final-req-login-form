@@ -26,7 +26,7 @@ const Login = () => {
             <label for="exampleInputPassword1" class="lead fs-6">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
         </div>
-        <button className="btn-block" type="submit" class="btn btn-outline-warning btn-lg w-100 mb-3">Sign up</button>
+        <button className="btn-block" type="submit" class="btn btn-outline-warning btn-lg w-100 mb-3">Login</button>
         <div className="text-center">
         <small id="emailHelp" class="form-text">Don't have an account?  <Link to="/">Register here.</Link> </small>
         </div>
