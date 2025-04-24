@@ -10,32 +10,52 @@ const test = (req, res) => {
 //register API
 const registerUser = async (req, res) => {
     try {
-        const {name, email, password} = req.body;
+        const {name, email, address, password} = req.body;
         //check the name input
         if(!name) {
             return res.json({
-                error: 'name is required'
+                error: 'name is required 😞'
             })
         }
-        //check the password input
-        if(!password) {
+        //check the address input
+        if(!address) {
             return res.json({
-                error: 'password is required'
-            })
-        } else if(password.length < 6) {
-            return res.json ({
-                error: 'password should be at least 6 characters long'
+                error: 'address is required 😞'
             })
         }
+
+        // check the password input 
+        if (!password) {
+            return res.json({
+                error: 'password is required 😞'
+            });
+        } else if (password.length < 6) {
+            return res.json({
+                error: 'password should be at least 6 characters long 😞'
+            });
+        } else if (!/[A-Z]/.test(password)) {
+            return res.json({
+                error: 'password should contain at least one uppercase letter 😞'
+            });
+        } else if (!/[0-9]/.test(password)) {
+            return res.json({
+                error: 'password should contain at least one number 😞'
+            });
+        } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            return res.json({
+                error: 'password should contain at least one symbol 😞'
+            });
+        }
+
         //check email input
         const exist = await User.findOne({email});
         if(exist) {
             return res.json ({
-                error: 'Email  is taken already'
+                error: 'Email  is taken already 😞'
             })
         } else if(!email) {
             return res.json({
-                error: 'Email is required'
+                error: 'Email is required 😞'
             })
         }
 
@@ -43,7 +63,8 @@ const registerUser = async (req, res) => {
         //create user in db
         const user = await User.create({
             name, 
-            email, 
+            email,
+            address, 
             password: hashedPassword
         })
 

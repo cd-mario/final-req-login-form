@@ -11,22 +11,23 @@ const Signup = () => {
     const [data, setData] = useState({
         name: '',
         email: '',
+        address: '',
         password: ''
     })
 
     const registerUser  = async (e) => {
         e.preventDefault();
 
-        const {name, email, password} = data
+        const {name, email, address, password} = data
         try {
             const {data} = await axios.post('/register', {
-                name, email, password
+                name, email, address, password
             })
         if(data.error) {
             toast.error(data.error)
         } else {
             setData({})
-            toast.success('Sign up successful')
+            toast.success('Sign up successful 👌')
             history.push('/login')
         }
         } catch (err) {
@@ -44,12 +45,16 @@ const Signup = () => {
                 <input type="text" class="form-control"  placeholder="Enter Name" value={data.name} onChange={(e) => setData({...data, name: e.target.value})}/>
             </div>
             <div class="form-group mb-4">
-                <label class="lead fs-6">Email address</label>
+                <label class="lead fs-6">Email</label>
                 <input type="email" class="form-control" placeholder="Enter email" value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
             </div>
             <div class="form-group mb-4">
-                <label class="lead fs-6">Password</label>
-                <input type="password" class="form-control" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
+                <label class="lead fs-6">Address</label>
+                <input type="text" class="form-control" placeholder="Enter address" value={data.address} onChange={(e) => setData({...data, address: e.target.value})}/>
+            </div>
+            <div class="form-group mb-4">
+                <label class="lead fs-6">password</label>
+                <input type="password" class="form-control" placeholder="Enter password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
             </div>
             <button className="btn-block" type="submit" class="btn btn-outline-primary btn-lg w-100 mb-3">Sign up</button>
             <div className="text-center">
