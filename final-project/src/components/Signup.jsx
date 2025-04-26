@@ -43,24 +43,24 @@ const Signup = () => {
                 <div className="col">
                     <img src={registerImg} class="mx-auto img-fluid mt-5" alt="Responsive image" />
                 </div>
-                <div class="col">
+                <div class="col mt-2">
                     <form class="mx-auto rounded p-4 mt-5" onSubmit={registerUser} style={{width: '90%'}}>
                         <h1 class="display-5 text-center mb-5 fw-bold text-primary">Register</h1>
                         <div class="form-group mb-4 mt-4">
-                            <input type="text" class="form-control lead"   placeholder="Name" value={data.name} onChange={(e) => setData({...data, name: e.target.value})}/>
+                            <input type="text" class="form-control lead fs-6"   placeholder="Name" value={data.name} onChange={(e) => setData({...data, name: e.target.value})}/>
                         </div>
                         <div class="form-group mb-4">
-                            <input type="email" class="form-control lead" placeholder="Email" value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
+                            <input type="email" class="form-control lead fs-6" placeholder="Email" value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
                         </div>
                         <div class="form-group mb-4">
-                            <input type="text" class="form-control" placeholder="Address" value={data.address} onChange={(e) => setData({...data, address: e.target.value})}/>
+                            <input type="text" class="form-control fs-6" placeholder="Address" value={data.address} onChange={(e) => setData({...data, address: e.target.value})}/>
                         </div>
                         <div class="form-group mb-4">
-                            <input type="password" class="form-control" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
+                            <input type="password" class="form-control fs-6" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
                         </div>
-                        <button className="btn-block" type="submit" class="btn btn-outline-primary btn-lg w-100 mb-3">Sign up</button>
-                        <div className="text-center">
-                        <small id="emailHelp" class="form-text">Already have an account?  <Link to="/login">Login here.</Link> </small>
+                        <button className="btn-block" type="submit" class="btn btn-outline-primary btn-lg w-100 mb-3 fw-bold">Sign up</button>
+                        <div className="text-center mt-3">
+                        <small id="emailHelp" class="form-text">Already have an account?  <Link class="text-primary fw-bold" to="/login">Login here.</Link> </small>
                         </div>
                 </form>
                 </div>
