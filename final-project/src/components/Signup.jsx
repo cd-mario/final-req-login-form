@@ -55,9 +55,10 @@ const Signup = () => {
                         <div class="form-group mb-4">
                             <input type="text" class="form-control fs-6" placeholder="Address" value={data.address} onChange={(e) => setData({...data, address: e.target.value})}/>
                         </div>
-                        <div class="form-group mb-4">
+                        <div class="form-group mb-3">
                             <input type="password" class="form-control fs-6" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
                         </div>
+                        <div class="g-recaptcha mb-3" data-sitekey="6LeFwiorAAAAAFtY7W45ITXrWkfFJmCWDgxtqgt8"></div>
                         <button className="btn-block" type="submit" class="btn btn-outline-primary btn-lg w-100 mb-3 fw-bold">Sign up</button>
                         <hr />
                         <div class="text-center mt-2">
