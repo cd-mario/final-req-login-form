@@ -27,23 +27,23 @@ const registerUser = async (req, res) => {
         // check the password input 
         if (!password) {
             return res.json({
-                error: 'password is required 😞'
+                error: '❗: Password is required'
             });
-        } else if (password.length < 6) {
+        } else if (password.length < 8) {
             return res.json({
-                error: 'password should be at least 6 characters long 😞'
+                error: '❗: Password should be at least 8 characters long'
             });
         } else if (!/[A-Z]/.test(password)) {
             return res.json({
-                error: 'password should contain at least one uppercase letter 😞'
+                error: '❗: Password should contain at least one uppercase letter'
             });
         } else if (!/[0-9]/.test(password)) {
             return res.json({
-                error: 'password should contain at least one number 😞'
+                error: '❗: Password should contain at least one number'
             });
         } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
             return res.json({
-                error: 'password should contain at least one symbol 😞'
+                error: '❗: Password should contain at least one symbol'
             });
         }
 
@@ -51,11 +51,11 @@ const registerUser = async (req, res) => {
         const exist = await User.findOne({email});
         if(exist) {
             return res.json ({
-                error: 'Email  is taken already 😞'
+                error: '❗: Email  is taken already'
             })
         } else if(!email) {
             return res.json({
-                error: 'Email is required 😞'
+                error: '❗: Email is required'
             })
         }
 

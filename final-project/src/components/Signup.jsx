@@ -44,8 +44,8 @@ const Signup = () => {
                     <img src={registerImg} class="mx-auto img-fluid mt-5" alt="Responsive image" />
                 </div>
                 <div class="col mt-2">
-                    <form class="mx-auto rounded p-4 mt-5" onSubmit={registerUser} style={{width: '90%'}}>
-                        <h1 class="display-5 text-center mb-5 fw-bold text-primary">Register</h1>
+                    <form class="mx-auto rounded p-4 mt-5" onSubmit={registerUser} style={{width: '80%'}}>
+                        <h1 class="display-5 text-center mb-4 fw-bold text-primary">Register</h1>
                         <div class="form-group mb-4 mt-4">
                             <input type="text" class="form-control lead fs-6"   placeholder="Name" value={data.name} onChange={(e) => setData({...data, name: e.target.value})}/>
                         </div>
@@ -59,8 +59,9 @@ const Signup = () => {
                             <input type="password" class="form-control fs-6" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
                         </div>
                         <button className="btn-block" type="submit" class="btn btn-outline-primary btn-lg w-100 mb-3 fw-bold">Sign up</button>
-                        <div className="text-center mt-3">
-                        <small id="emailHelp" class="form-text">Already have an account?  <Link class="text-primary fw-bold" to="/login">Login here.</Link> </small>
+                        <hr />
+                        <div class="text-center mt-2">
+                        <small id="emailHelp" class="form-text fw-bold">Already have an account?  <Link class="text-primary" to="/login">Login here.</Link> </small>
                         </div>
                 </form>
                 </div>

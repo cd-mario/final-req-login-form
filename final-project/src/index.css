@@ -47,3 +47,12 @@
   font-weight: 600;
   color: rgba(0, 0, 0, 0.859);
  }
+
+
+ input:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+ }
+ input:focus {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }

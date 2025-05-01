@@ -38,8 +38,8 @@ const Login = () => {
                 <img src={registerImg} class="mx-auto img-fluid mt-5" alt="Responsive image" />
             </div>
             <div class="col mt-3">
-                <form class=" mx-auto p-4 mt-5" onSubmit={loginUser} style={{width: '90%'}}>
-                    <h1 class="display-5 text-center mb-5 fw-bold text-warning">Log in</h1>
+                <form class=" mx-auto p-4 mt-5" onSubmit={loginUser} style={{width: '80%'}}>
+                    <h1 class="display-5 text-center fw-bold text-warning">Log in</h1>
                     <div class="form-group mb-4 mt-4 lead ">
                         <input type="email" class="form-control fs-6" placeholder="Email" value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
                     </div>
@@ -47,8 +47,9 @@ const Login = () => {
                         <input type="password" class="form-control fs-6" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
                     </div>
                     <button className="btn-block" type="submit" class="btn btn-outline-warning btn-lg w-100 mb-3 fw-bold">Login</button>
+                    <hr />
                     <div className="text-center mt-3">
-                    <small id="emailHelp" class="form-text">Don't have an account?  <Link class="text-warning fw-bold" to="/">Register here.</Link> </small>
+                    <small id="emailHelp" class="form-text fw-bold">Don't have an account?  <Link class="text-warning fw-bold" to="/">Register here.</Link> </small>
                     </div>
                 </form>
             </div>

@@ -9,13 +9,13 @@ const Home = () => {
     return ( 
         <>
             <nav class="navbar navbar-dark bg-dark justify-content-between p-4">
-                <a class="navbar-brand fs-6 rounded">Final Project</a>
+                <a class="navbar-brand fs-6 rounded">Midterms Project</a>
                 <Link to="/"><button type="button" class="btn btn-outline-light">Logout</button></Link>
             </nav>
             <div class="px-4 py-5 my-5 container" style={{width: '70%'}}>
                 <div className="card mb-4">
                     <div className="card-body">
-                            <h1 class="display-6 text-primary fw-bold text-uppercase">Welcome, {!!user && user.name} 👋</h1>
+                            <h1 class="display-5 text-primary fw-bold text-uppercase"><span class="text-dark">Welcome</span>, {!!user && user.name} 👋</h1>
                             <p class="fw-bold text-secondary">@{!!user && user.email}</p>
                             <hr />
                             <p class=" fs-6 mb-3">This is a register and login form made with <b>MERN</b> stack:</p>
@@ -71,8 +71,8 @@ const Home = () => {
                         <a className="package-links" href="https://www.npmjs.com/package/cors" target="_blank"><h4 class="display-6 fs-5 fw-bold">🖇️Cors</h4></a>
                         <p class="mt-3"><span className="code">Cors</span> stands for Cross-Origin Resource Sharing. It’s a security feature built into web browsers that controls how your frontend (running in one domain) can make requests to a backend API on a different domain.</p>
                         <hr />
-                        <a className="package-links" href="https://www.npmjs.com/package/cookie-parser" target="_blank"><h4 class="display-6 fs-5 fw-bold">🖇️Cookie-parse</h4></a>
-                        <p class="mt-3"><span className="code">Cookie-parse</span> is a middleware for <span className="code">Express.js</span> that lets your server read cookies sent by the client (usually from the browser).</p>
+                        <a className="package-links" href="https://www.npmjs.com/package/cookie-parser" target="_blank"><h4 class="display-6 fs-5 fw-bold">🖇️<Cookie-parser></Cookie-parser></h4></a>
+                        <p class="mt-3"><span className="code">Cookie-parser</span> is a middleware for <span className="code">Express.js</span> that lets your server read cookies sent by the client (usually from the browser).</p>
                         <hr />
                     </div>
 
