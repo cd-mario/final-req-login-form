@@ -23,6 +23,7 @@ const Login = () => {
                 toast.error(data.error)
             } else {
                 setData({});
+                toast.success('Log in successful 👌')
                 history.push('/home')
             }
         } catch (err) {

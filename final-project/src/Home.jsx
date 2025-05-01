@@ -71,7 +71,7 @@ const Home = () => {
                         <a className="package-links" href="https://www.npmjs.com/package/cors" target="_blank"><h4 class="display-6 fs-5 fw-bold">🖇️Cors</h4></a>
                         <p class="mt-3"><span className="code">Cors</span> stands for Cross-Origin Resource Sharing. It’s a security feature built into web browsers that controls how your frontend (running in one domain) can make requests to a backend API on a different domain.</p>
                         <hr />
-                        <a className="package-links" href="https://www.npmjs.com/package/cookie-parser" target="_blank"><h4 class="display-6 fs-5 fw-bold">🖇️<Cookie-parser></Cookie-parser></h4></a>
+                        <a className="package-links" href="https://www.npmjs.com/package/cookie-parser" target="_blank"><h4 class="display-6 fs-5 fw-bold">Cookie-parser</h4></a>
                         <p class="mt-3"><span className="code">Cookie-parser</span> is a middleware for <span className="code">Express.js</span> that lets your server read cookies sent by the client (usually from the browser).</p>
                         <hr />
                     </div>
