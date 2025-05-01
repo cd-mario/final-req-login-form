@@ -1,0 +1,1 @@
+Get all the changes from different device: git pull origin main
