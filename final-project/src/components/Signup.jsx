@@ -12,7 +12,7 @@ const Signup = () => {
 
     const registerUser  = (e) => {
         e.preventDefault()
-
+        
         // setData({
         //     name: '',
         //     email: '',
