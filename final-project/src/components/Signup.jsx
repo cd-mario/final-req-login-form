@@ -43,9 +43,9 @@ const Signup = () => {
                 <div className="col">
                     <img src={registerImg} class="mx-auto img-fluid mt-5" alt="Responsive image" />
                 </div>
-                <div class="col mt-2">
+                <div class="col mt-5">
                     <form class="mx-auto rounded p-4 mt-5" onSubmit={registerUser} style={{width: '80%'}}>
-                        <h1 class="display-5 text-center mb-4 fw-bold text-primary">Register</h1>
+                        <h1 class="display-5 text-center mb-5 fw-bold text-primary">Register</h1>
                         <div class="form-group mb-4 mt-4">
                             <input type="text" class="form-control lead fs-6"   placeholder="Name" value={data.name} onChange={(e) => setData({...data, name: e.target.value})}/>
                         </div>
@@ -58,7 +58,7 @@ const Signup = () => {
                         <div class="form-group mb-3">
                             <input type="password" class="form-control fs-6" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
                         </div>
-                        <div class="g-recaptcha mb-3" data-sitekey="6LeFwiorAAAAAFtY7W45ITXrWkfFJmCWDgxtqgt8"></div>
+                        <div class="g-recaptcha form-group mb-4" data-sitekey="6LeFwiorAAAAAFtY7W45ITXrWkfFJmCWDgxtqgt8"></div>
                         <button className="btn-block" type="submit" class="btn btn-outline-primary btn-lg w-100 mb-3 fw-bold">Sign up</button>
                         <hr />
                         <div class="text-center mt-2">
