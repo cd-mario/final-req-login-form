@@ -38,10 +38,10 @@ const Login = () => {
             <div class="col">
                 <img src={registerImg} class="mx-auto img-fluid mt-5" alt="Responsive image" />
             </div>
-            <div class="col mt-3">
+            <div class="col mt-5">
                 <form class=" mx-auto p-4 mt-5" onSubmit={loginUser} style={{width: '80%'}}>
                     <h1 class="display-5 text-center fw-bold text-warning">Log in</h1>
-                    <div class="form-group mb-4 mt-4 lead ">
+                    <div class="form-group mb-4 mt-5 lead ">
                         <input type="email" class="form-control fs-6" placeholder="Email" value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
                     </div>
                     <div class="form-group mb-4">

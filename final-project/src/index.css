@@ -25,7 +25,7 @@
  }
  .form-control {
   font-size: 0.9rem;
-  padding:  0.7rem;
+  padding:  0.8rem;
  }
  .btn-outline-light:hover {
   color: black;
@@ -48,11 +48,8 @@
   font-weight: 600;
   color: rgba(0, 0, 0, 0.859);
  }
-
-
- input:hover {
+ input {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  cursor: pointer;
  }
  input:focus {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
