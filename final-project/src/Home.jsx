@@ -15,7 +15,7 @@ const Home = () => {
             <div class="px-4 py-5 my-5 container" style={{width: '70%'}}>
                 <div className="card mb-4">
                     <div className="card-body">
-                            <h1 class="display-5 text-primary fw-bold text-uppercase"><span class="text-dark">Welcome</span>, {!!user && user.name} 👋</h1>
+                            <h1 class="display-5 text-primary fw-bold text-uppercase"><span class="text-dark">Welcome,</span> {!!user && user.name} 👋</h1>
                             <p class="fw-bold text-secondary">@{!!user && user.email}</p>
                             <hr />
                             <p class=" fs-6 mb-3">This is a register and login form made with <b>MERN</b> stack:</p>
