@@ -17,19 +17,8 @@ const Signup = () => {
         password: ''
     })
 
-<<<<<<< HEAD
-    const registerUser  = (e) => {
-        e.preventDefault()
-        
-        setData({
-            name: '',
-            email: '',
-            password: ''
-        })
-=======
     const registerUser  = async (e) => {
         e.preventDefault();
->>>>>>> b39810abf2d963e3089896ba3ee8563c5a92762a
 
         const {name, email, address, password} = data
         try {
