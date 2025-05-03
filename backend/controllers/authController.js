@@ -14,17 +14,17 @@ const registerUser = async (req, res) => {
         //check the name input
         if(!name) {
             return res.json({
-                error: 'name is required'
+                error: 'Name is required'
             })
         } else if (/[^a-zA-Z\s]/.test(name)) {
             return res.json({
-                error: 'name should not contain numbers or symbols'
+                error: 'Name should not contain numbers or symbols'
             });
         }
         //check the address input
         if(!address) {
             return res.json({
-                error: 'address is required'
+                error: 'Address is required'
             })
         }
 
@@ -100,7 +100,7 @@ const loginUser = async (req, res) => {
             })
         } else {
             res.json({
-                error: 'password do not match'
+                error: 'Password do not match'
             })
         }
     } catch (err) {
