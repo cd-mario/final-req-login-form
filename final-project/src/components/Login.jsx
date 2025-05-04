@@ -43,7 +43,7 @@ const Login = () => {
             </div>
             <div class="col mt-5">
                 <form class=" mx-auto p-4 mt-5" onSubmit={loginUser} style={{width: '80%'}}>
-                    <h1 class="display-5 text-center fw-bold text-warning">Log in</h1>
+                    <h1 class="display-5 text-center fw-bold text-success">Log in</h1>
                     <div class="form-group mb-4 mt-5 lead ">
                         <input type="email" class="form-control fs-6" placeholder="Email" value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
                     </div>
@@ -54,10 +54,10 @@ const Login = () => {
                             <input type="checkbox" class="form-check-input" id="showPasswordCheck" checked={showPassword} onChange={() => setShowPassword(!showPassword)} />
                             <label class="fs-6"  htmlFor="showPasswordCheck">Show Password</label>
                         </div>
-                    <button className="btn-block" type="submit" class="btn btn-outline-warning btn-lg w-100 mb-3 fw-bold">Login</button>
+                    <button className="btn-block" type="submit" class="btn btn-outline-success  btn-lg w-100 mb-3 fw-bold">Login</button>
                     <hr />
                     <div className="text-center mt-3">
-                    <small id="emailHelp" class="form-text fw-bold">Don't have an account?  <Link class="text-warning fw-bold" to="/">Register here.</Link> </small>
+                    <small id="emailHelp" class="form-text fw-bold">Don't have an account?  <Link class="text-success fw-bold" to="/">Register here.</Link> </small>
                     </div>
                 </form>
             </div>
