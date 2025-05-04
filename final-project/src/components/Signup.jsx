@@ -17,6 +17,8 @@ const Signup = () => {
         password: ''
     })
 
+    const [showPassword, setShowPassword] = useState(false);
+
     const registerUser  = async (e) => {
         e.preventDefault();
 
@@ -56,7 +58,11 @@ const Signup = () => {
                             <input type="text" class="form-control fs-6" placeholder="Address" value={data.address} onChange={(e) => setData({...data, address: e.target.value})}/>
                         </div>
                         <div class="form-group mb-3">
-                            <input type="password" class="form-control fs-6" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
+                            <input  type={showPassword ? 'text' : 'password'} class="form-control fs-6" placeholder="Password" value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
+                        </div>
+                        <div class="form-check mb-4">
+                            <input type="checkbox" class="form-check-input" id="showPasswordCheck" checked={showPassword} onChange={() => setShowPassword(!showPassword)} />
+                            <label class="fs-6"  htmlFor="showPasswordCheck">Show Password</label>
                         </div>
                         <div class="g-recaptcha form-group mb-4" data-sitekey="6LeFwiorAAAAAFtY7W45ITXrWkfFJmCWDgxtqgt8"></div>
                         <button className="btn-block" type="submit" class="btn btn-outline-primary btn-lg w-100 mb-3 fw-bold">Sign up</button>
